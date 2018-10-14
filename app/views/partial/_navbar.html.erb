@@ -1,37 +1,44 @@
 <!-- 导航栏  -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top rounded">
-    <a class="navbar-brand" href="#">XSystem</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggler_id" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="#">通信管理系统</a>
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="toggler_id">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item <%= params[:controller] == 'today' ? 'active' : '' %>">
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
                 <%= link_to '今日', "#", class:"nav-link" %>
             </li>
-
-            <li class="nav-item <%= params[:controller] == 'work_logs' ? 'active' : '' %>">
+            <li class="nav-item">
                 <%= link_to '值班日志',"#", class:"nav-link" %>
             </li>
-
-            <li class="nav-item <%= params[:controller] == 'work_plans' ? 'active' : '' %>">
-                <%= link_to '处置预案', "#", class:"nav-link" %>
-            </li>
-            <li class="nav-item <%= params[:controller] == 'work_file' %>">
-              <%= link_to '文档', "#", class:"nav-link" %>
+            <li class="nav-item">
+                <%= link_to '处置预案',"#", class:"nav-link" %>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">通信资料</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">通信资料</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="#">64K电缆资料</a>
                     <a class="dropdown-item" href="#">2M资料</a>
                     <a class="dropdown-item" href="#">光缆资料</a>
                 </div>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">文档</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">技术文档</a>
+                    <a class="dropdown-item" href="#">办公文档</a>
+                    <a class="dropdown-item" href="#">光缆资料</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <%= link_to '用户管理',"#", class:"nav-link" %>
+            </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
-</nav>
+</nav>  
